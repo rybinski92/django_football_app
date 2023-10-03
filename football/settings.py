@@ -85,13 +85,13 @@ DATABASES = {
 }
 
 
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST_USER  = 'apikey'
-EMAIL_HOST_PASSWORD  = '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'
-EMAIL_PORT  = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'adamrybinski.kontakt@gmail.com'
+EMAIL_HOST = 
+EMAIL_BACKEND = 
+EMAIL_HOST_USER  = 
+EMAIL_HOST_PASSWORD  = 
+EMAIL_PORT  = 
+EMAIL_USE_TLS = 
+DEFAULT_FROM_EMAIL = 
 
 
 

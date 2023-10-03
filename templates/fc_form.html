@@ -1,0 +1,33 @@
+{% extends 'glowny.html' %}
+{% load bootstrap %}
+{% block tytul %} FC form {% endblock %}
+
+
+{% block strona %}
+
+
+<header class="hero-img">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card" style="width: 32rem;">
+        <div class="card-body">
+            <h5 class="card-title">Zaloguj się</h5>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+
+                {% if nowy %}
+                <button type="submit" class="btn btn-primary">Dodaj</button>
+                {% else %}
+                <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
+                {% endif %}
+            </form>
+        </div>
+        <a href="{% url 'wszystkie_football' %}">Cofnij</a>
+    </div>
+    
+    <div class="hero-shadow"></div>   
+</header>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'glowny.html' %}
+<!-- {% load bootstrap %} -->
+
+{% block tytul %} Accept {% endblock %}
+
+
+{% block strona %}
+<header class="hero-img">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card" style="width: 32rem;">
+        <div class="card-body">
+            <h5 class="card-title">Czy chcesz usunąć: "{{ football.tytul }}"?</h5>
+
+            <form method="POST">
+                {% csrf_token %}
+            
+                <button type="submit" class="btn btn-danger">Usuń FC</button>
+            </form>
+            <a href="{% url 'wyszukiwarka' %}">Cofnij</a>
+        </div>
+    </div>
+    <div class="hero-shadow"></div>   
+</header>
+{% endblock %}

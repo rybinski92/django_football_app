@@ -1,0 +1,24 @@
+{% extends 'glowny.html' %}
+{% load bootstrap %}
+
+{% block strona %}
+<header class="hero-img">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card" style="width: 40rem;">
+        <div class="card-body">
+            <h5 class="card-title">Register</h5>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <!-- {{ form.as_p }} -->
+                <button class="btn btn-primary" type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <div class="hero-shadow"></div>
+</header>
+{% endblock %}

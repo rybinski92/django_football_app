@@ -1,0 +1,36 @@
+{% extends 'glowny.html' %}
+
+{% block tytul %} InstaFootball {% endblock %}
+
+
+{% block strona %}
+{% include "menu.html" %}
+
+
+<div class="main-page">
+    <header class="hero-img">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="hero-text text-center p-2">
+            <h1>witajcie w <i class="fa-solid fa-person-running"></i><i class="fa-solid fa-futbol"></i> insta<span class="blue-text">football</span></h1>
+            <p>W miejscu, w którym możesz zobaczyć najlepsze kluby z europy oraz z Polski. <br> Zalogowani użytkownicy mogą
+                dodawać oraz edytować kluby.</p>
+            <a href="{% url 'wyszukiwarka' %}" class="btn btn-outline-light mt-2 text-uppercase">Zobacz kluby</a>
+        </div>
+        <div class="hero-shadow"></div>   
+    </header>
+</div>
+
+{% endblock %}
+
+
+

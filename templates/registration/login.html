@@ -1,0 +1,32 @@
+{% extends 'glowny.html' %}
+{% load bootstrap %}
+{% block tytul %} Zaloguj {% endblock %}
+
+
+{% block strona %}
+<header class="hero-img">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Zaloguj się</h5>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <br>
+                <button class="btn btn-primary" type="submit">Zaloguj</button>
+            </form>
+            <br>
+            <h5>Kliknij tutaj, jeśli nie pamiętasz hasła.</h5>
+            <a href="{% url 'password_reset' %}"><button type="button" class="btn btn-warning">Zmień hasło</button></a>
+            <br>
+            <br>
+            <h5>Jeśli nie posiadasz konta, zarejestruj się.</h5>
+            <a href="{% url 'register' %}"><button type="button" class="btn btn-success">Załóż konto</button></a>
+        </div>
+    </div>
+    <div class="hero-shadow"></div>   
+</header>
+{% endblock %}
